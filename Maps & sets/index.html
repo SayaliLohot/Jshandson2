@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maps & Sets</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h1 class="heading">Maps & Sets</h1>
+    <h3>
+        Question 1:<br>
+        You are given a string (STR) of length N, consisting of only the lower case English alphabet.
+        Your task is to remove all the duplicate occurrences of characters in the string.
+        <br>
+        Input:
+        abcadeecfb
+        <br>
+        Output:
+        abcdef
+    </h3>
+    <pre>
+    code:
+    
+        const set = new Set();
+        function duplicate(str,n)
+        {
+         for(let i=0;i < str.length;i++)
+          {
+             set.add(str[i]);
+          }
+         let str1 = " ";
+         or(let val of set .values())
+          {
+           str1 = str1+val;
+          }  
+             console.log( "All the duplicate occurance of characters in the string = " + str1);
+        }
+
+        duplicate("abcadeecfb");
+    </pre>
+
+    <h3>
+        Question 2:<br>
+        You are given a string (STR) of length N, you have to print the count of all alphabet.(using maps)
+        <br>
+        Input:
+        abcadeecfb
+        <br>
+        Output:
+        a=2
+        b=2
+        c=2
+        d=1
+        e=2
+        f=1
+    </h3>
+
+    <pre>
+    code:
+
+        let str = "abcdeecfb";
+        let newStr = str.split("");
+        let newMap = new Map();
+        
+        for (let i = 0; i < newStr.length; i++) {
+            let count = 1;
+            for (let b = i + 1; b < newStr.length; b++) {
+                if (newStr[i] === newStr[b]) {
+                    count++;
+                    newStr.splice(b, 1);
+                    b--;
+                }
+            }
+            newMap.set(newStr[i], count);
+        }
+        for (let [key, value] of newMap.entries()) {
+            console.log( key + "=" + value);
+        }</pre>
+
+    <script src="./index.js"></script>
+
+</body>
+</html>
