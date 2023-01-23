@@ -1,0 +1,10 @@
+body{
+    background-color: antiquewhite;
+}
+.heading{
+    text-align: center;
+    background-color: cadetblue;
+}
+.output{
+    color: red;
+}
