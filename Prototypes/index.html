@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototypes</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h1 class="heading">Prototypes</h1>
+<h3>Q.1 Create 2 objects - parent and child. Attach methods to parent and use those methods in child object using parents prototype</h3>
+<pre>
+    const parent ={
+    details(){
+        console.log(`My name is ${this.name} and I am from ${this.location} and my age is ${this.age}`)
+    }
+    }
+    const firstchild = Object.create(parent);
+    firstchild.name ="Sayali";
+    firstchild.location="Maharashtra";
+    firstchild.age= 23;
+    
+    firstchild.details();
+    
+    const secondChild= Object.create(parent)
+    secondChild.name="Shruti"
+    secondChild.location="Pune"
+    secondChild.age="22"
+    
+    secondChild.details()</pre>
+    <b>My name is Sayali and I am from Maharashtra and my age is 23<br>
+       My name is Shruti and I am from Pune and my age is 22</b>
+
+<h3>Q.2 Write code to explain prototype chaining</h3>
+<h3>Q.3 Add a method to calculate sum of all elements in Array in array's protype, use that method to calculate sum for multiple arrays</h3>
+<h3>Q.4 Write a JavaScript function to retrieve all the names of object's own and inherited properties.</h3>
+
+    <script src="./script.js"></script>
+</body>
+</html>
