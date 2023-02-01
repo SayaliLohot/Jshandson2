@@ -42,3 +42,18 @@ arr.__proto__.sum=function(givenArray){
 let result =arr.sum(arr)
 console.log("The sum of given array's element is ", result)
 //output-15
+
+//Q.4  Write a JavaScript function to retrieve all the names of object's own and inherited properties.
+
+function DisplayData(name,age,college){
+    this.name = name,
+    this.age = age,
+    this.college=college
+}
+DisplayData.prototype.passyrear ="2023"
+ const data = new DisplayData("Sayali", 23 , "Prepbytes")
+ console.log(data)
+ console.log("The name is ",data.name);//output-Sayali
+ console.log("The passyrear is ",data.passyrear)//output -2023
+ console.log("The age is ",data.age)
+ console.log("The college is ",data.college)

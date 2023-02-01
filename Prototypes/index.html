@@ -59,6 +59,24 @@ let arr = new Array(1,2,3,4,5)
     console.log(result)</pre>
     <b>Output - The sum of given array's element is  15 </b>
 <h3>Q.4 Write a JavaScript function to retrieve all the names of object's own and inherited properties.</h3>
+<pre>
+    function DisplayData(name,age,college){
+        this.name = name,
+        this.age = age,
+        this.college=college
+    }
+    DisplayData.prototype.passyrear ="2023"
+     const data = new DisplayData("Sayali", 23 , "Prepbytes")
+     console.log(data)
+     console.log("The name is ",data.name);//output-Sayali
+     console.log("The passyrear is ",data.passyrear)//output -2023
+     console.log("The age is ",data.age)
+     console.log("The college is ",data.college)</pre>
+ <b>output-The name is  Sayali<br>
+output -The passyrear is  2023<br>
+output-The age is  23<br>
+output-The college is  Prepbytes
+</b>
 
     <script src="./script.js"></script>
 </body>
